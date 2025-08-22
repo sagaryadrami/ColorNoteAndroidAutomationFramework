@@ -14,7 +14,7 @@ public class FirstFlow extends BaseTest {
 
 	@Test
 	public void createNote() throws InterruptedException {
-		
+		System.out.println("first testcase ");
 		Tutorial tutorial = new Tutorial(driver);
 		HomePage home = tutorial.userManual();
 		TextNotePage note = home.clickOnAddButton();
