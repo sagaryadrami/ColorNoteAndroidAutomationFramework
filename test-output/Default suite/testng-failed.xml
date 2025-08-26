@@ -5,7 +5,8 @@
     <classes>
       <class name="TestCases.FirstFlow">
         <methods>
-          <include name="firstTestCase"/>
+          <include name="editTheNote"/>
+          <include name="createNote"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>

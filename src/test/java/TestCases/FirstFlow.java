@@ -20,4 +20,14 @@ public class FirstFlow extends BaseTest {
 		TextNotePage note = home.clickOnAddButton();
 		note.createNote();
 	}
+	
+	
+	@Test(dependsOnMethods="createNote")
+	public void editTheNote() throws InterruptedException {
+		HomePage home = new HomePage(driver);
+		TextNotePage note = home.editCreatedNote();
+		note.continueEditNote();
+	}
+	
+	
 }

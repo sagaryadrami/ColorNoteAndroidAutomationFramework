@@ -33,11 +33,28 @@ public class TextNotePage {
     private WebElement saveButton;
     
     
-    public void createNote() throws InterruptedException {
+    @AndroidFindBy(id="com.socialnmobile.dictapps.notepad.color.note:id/back_btn")
+    private WebElement backButton;
+    
+    @AndroidFindBy(id="com.socialnmobile.dictapps.notepad.color.note:id/edit_btn")
+    private WebElement editBtn;
+    
+//    @AndroidFindBy(id="com.socialnmobile.dictapps.notepad.color.note:id/edit_note")
+//    private WebElement ctnEditBtnCursor;
+    
+    public HomePage createNote() throws InterruptedException {
     	Thread.sleep(2000);
     	textOptionSelect.click();
     	Thread.sleep(1000);
     	noteEditor.sendKeys("sagar yadrami");
+    	saveButton.click();
+    	backButton.click();
+    	return new HomePage(driver);
+    }
+    
+    public void continueEditNote() {
+    	editBtn.click();
+    	noteEditor.sendKeys(" new edited note testing trying to save it .........");
     	saveButton.click();
     }
 	
