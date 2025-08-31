@@ -56,6 +56,7 @@ public class TextNotePage {
     	editBtn.click();
     	noteEditor.sendKeys(" new edited note testing trying to save it .........");
     	saveButton.click();
+    	backButton.click();
     }
 	
 }

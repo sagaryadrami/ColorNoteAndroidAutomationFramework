@@ -29,5 +29,12 @@ public class FirstFlow extends BaseTest {
 		note.continueEditNote();
 	}
 	
+	@Test(dependsOnMethods="editTheNote")
+	public void createSecondNote() throws InterruptedException {
+		HomePage homepage = new HomePage(driver);
+		TextNotePage note = homepage.clickOnAddButton();
+		HomePage home = note.createNote();
+		home.editCreatedNote();
+	}
 	
 }

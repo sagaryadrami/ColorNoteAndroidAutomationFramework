@@ -24,8 +24,18 @@ public class HomePage {
 	@AndroidFindBy(xpath="//android.widget.ImageButton[@content-desc='Add']")
 	private WebElement addButton;
 	
+	@AndroidFindBy(id="Add")
+	private WebElement addIcon;
+	
 	@AndroidFindBy(id="com.socialnmobile.dictapps.notepad.color.note:id/title")
 	private WebElement createdNote1;
+	
+	@AndroidFindBy(xpath="//android.widget.ListView[@resource-id='com.socialnmobile.dictapps.notepad.color.note:id/select_dialog_listview']/android.widget.LinearLayout[1]")
+	private WebElement optionText;
+	
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@resource-id='com.socialnmobile.dictapps.notepad.color.note:id/title' and @text='sagar yadrami']")
+	private WebElement clickOnNote;
 	
 	public TextNotePage clickOnAddButton() throws InterruptedException {
 		Thread.sleep(1000);
@@ -37,8 +47,15 @@ public class HomePage {
 	public TextNotePage editCreatedNote() throws InterruptedException {
 		createdNote1.click();
 		Thread.sleep(2000);
-		
 		return new TextNotePage(driver);
-		
 	}
+	
+	public TextNotePage onClickOptions() throws InterruptedException {
+		addIcon.click();
+		Thread.sleep(2000);
+		optionText.click();
+		return new TextNotePage(driver);
+	}
+	
+	
 }
