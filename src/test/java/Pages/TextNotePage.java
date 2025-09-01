@@ -42,6 +42,12 @@ public class TextNotePage {
 //    @AndroidFindBy(id="com.socialnmobile.dictapps.notepad.color.note:id/edit_note")
 //    private WebElement ctnEditBtnCursor;
     
+    @AndroidFindBy(id="com.socialnmobile.dictapps.notepad.color.note:id/color_btn")
+    private WebElement colorBtn; 
+    
+    @AndroidFindBy(id="com.socialnmobile.dictapps.notepad.color.note:id/txt5")
+    private WebElement blueColour;
+    
     public HomePage createNote() throws InterruptedException {
     	Thread.sleep(2000);
     	textOptionSelect.click();
@@ -57,6 +63,15 @@ public class TextNotePage {
     	noteEditor.sendKeys(" new edited note testing trying to save it .........");
     	saveButton.click();
     	backButton.click();
+    }
+    
+    public void changeTheme() {
+    	editBtn.click();
+    	colorBtn.click();
+    	blueColour.click();
+    	saveButton.click();
+    	backButton.click();
+    	
     }
 	
 }

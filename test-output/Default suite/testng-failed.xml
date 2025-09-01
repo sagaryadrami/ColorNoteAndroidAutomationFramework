@@ -7,6 +7,7 @@
         <methods>
           <include name="editTheNote"/>
           <include name="createNote"/>
+          <include name="createSecondNote"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>

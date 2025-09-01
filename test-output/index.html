@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Sagar yadrami\AppData\Local\Temp\testng-eclipse--1971423943\testng-customsuite.xml</span>
+                    <span>C:\Users\Sagar yadrami\AppData\Local\Temp\testng-eclipse-1869116116\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,12 +103,27 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="TestCases.FirstFlow" class="method navigator-link" hash-for-method="changeColour">changeColour</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="TestCases.FirstFlow" class="method navigator-link" hash-for-method="createNote">createNote</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="TestCases.FirstFlow" class="method navigator-link" hash-for-method="createSecondNote">createSecondNote</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="TestCases.FirstFlow" class="method navigator-link" hash-for-method="editTheNote">editTheNote</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="TestCases.FirstFlow" class="method navigator-link" hash-for-method="longHoldTheNote">longHoldTheNote</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -131,9 +146,23 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="changeColour">
+                  </a> <!-- changeColour -->
+                  <span class="method-name">changeColour</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="createNote">
                   </a> <!-- createNote -->
                   <span class="method-name">createNote</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createSecondNote">
+                  </a> <!-- createSecondNote -->
+                  <span class="method-name">createSecondNote</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -143,12 +172,19 @@
                   <span class="method-name">editTheNote</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="longHoldTheNote">
+                  </a> <!-- longHoldTheNote -->
+                  <span class="method-name">longHoldTheNote</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Sagar yadrami\AppData\Local\Temp\testng-eclipse--1971423943\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Sagar yadrami\AppData\Local\Temp\testng-eclipse-1869116116\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -161,6 +197,9 @@
         &lt;methods&gt;
           &lt;include name=&quot;createNote&quot;/&gt;
           &lt;include name=&quot;editTheNote&quot;/&gt;
+          &lt;include name=&quot;longHoldTheNote&quot;/&gt;
+          &lt;include name=&quot;createSecondNote&quot;/&gt;
+          &lt;include name=&quot;changeColour&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- TestCases.FirstFlow --&gt;
     &lt;/classes&gt;
@@ -202,20 +241,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'createNote')
 data.setCell(0, 2, 'TestCases.FirstFlow')
-data.setCell(0, 3, 14568);
+data.setCell(0, 3, 13821);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'editTheNote')
+data.setCell(1, 1, 'changeColour')
 data.setCell(1, 2, 'TestCases.FirstFlow')
-data.setCell(1, 3, 9952);
+data.setCell(1, 3, 8632);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'createSecondNote')
+data.setCell(2, 2, 'TestCases.FirstFlow')
+data.setCell(2, 3, 8491);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'editTheNote')
+data.setCell(3, 2, 'TestCases.FirstFlow')
+data.setCell(3, 3, 7800);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'longHoldTheNote')
+data.setCell(4, 2, 'TestCases.FirstFlow')
+data.setCell(4, 3, 4684);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 24 seconds</span>
+              <span class="suite-total-time">Total running time: 43 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -248,15 +299,27 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">createNote</span>
-                <span class="method-start">5020 ms</span>
+                <span class="method-start">5102 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">editTheNote</span>
-                <span class="method-start">19592 ms</span>
+                <span class="method-start">18929 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">createSecondNote</span>
+                <span class="method-start">26733 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">changeColour</span>
+                <span class="method-start">35229 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">longHoldTheNote</span>
+                <span class="method-start">43865 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">29548 ms</span>
+                <span class="method-start">48552 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

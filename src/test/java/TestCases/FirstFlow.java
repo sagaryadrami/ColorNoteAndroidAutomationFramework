@@ -8,6 +8,7 @@ import Base.BaseTest;
 import Pages.HomePage;
 import Pages.TextNotePage;
 import Pages.Tutorial;
+import Utils.AppiumGestures;
 import io.appium.java_client.AppiumBy;
 
 public class FirstFlow extends BaseTest {
@@ -34,7 +35,20 @@ public class FirstFlow extends BaseTest {
 		HomePage homepage = new HomePage(driver);
 		TextNotePage note = homepage.clickOnAddButton();
 		HomePage home = note.createNote();
-		home.editCreatedNote();
+		//home.editCreatedNote();
 	}
 	
+	@Test(dependsOnMethods="createSecondNote")
+	public void changeColour() throws InterruptedException {
+		HomePage home = new HomePage(driver);
+		TextNotePage note = home.editCreatedNote();
+		note.changeTheme();
+		
+	}
+	
+	@Test(dependsOnMethods="changeColour")
+	public void longHoldTheNote() {
+		HomePage home = new HomePage(driver);
+		home.longPressTheElement();
+	}
 }
