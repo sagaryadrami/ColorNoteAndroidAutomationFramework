@@ -38,6 +38,9 @@ public class HomePage {
 	@AndroidFindBy(xpath="//android.widget.TextView[@resource-id='com.socialnmobile.dictapps.notepad.color.note:id/title' and @text='sagar yadrami']")
 	private WebElement clickOnNote;
 	
+	@AndroidFindBy(id="com.socialnmobile.dictapps.notepad.color.note:id/bottom_menu_reminder")
+	private WebElement setReminder;
+	
 	public TextNotePage clickOnAddButton() throws InterruptedException {
 		Thread.sleep(1000);
 		addButton.click();
@@ -58,10 +61,13 @@ public class HomePage {
 		return new TextNotePage(driver);
 	}
 	
-	public void longPressTheElement() {
+	public ReminderPage longPressTheElement() throws InterruptedException {
 		
 			AppiumGestures longpress = new AppiumGestures(driver);
 			longpress.longPressAction(createdNote1);
+			Thread.sleep(2000);
+			setReminder.click();
+			return new ReminderPage(driver);
 	
 	}
 }

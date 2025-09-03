@@ -6,6 +6,8 @@ import org.testng.annotations.Test;
 
 import Base.BaseTest;
 import Pages.HomePage;
+import Pages.PhoneSetting;
+import Pages.ReminderPage;
 import Pages.TextNotePage;
 import Pages.Tutorial;
 import Utils.AppiumGestures;
@@ -47,8 +49,22 @@ public class FirstFlow extends BaseTest {
 	}
 	
 	@Test(dependsOnMethods="changeColour")
-	public void longHoldTheNote() {
+	public void longHoldTheNote() throws InterruptedException {
 		HomePage home = new HomePage(driver);
-		home.longPressTheElement();
+		ReminderPage reminder = home.longPressTheElement();
+		//reminder.setReminder();
 	}
-}
+	
+	@Test(dependsOnMethods="longHoldTheNote")
+	public void givePermissionAndroidSetting() {
+		ReminderPage reminder = new ReminderPage(driver);
+		PhoneSetting setting = reminder.setReminder();
+	    try {
+	        setting.givePermission();   // try to click Allow
+	        System.out.println("Permission granted successfully.");
+	    } catch (Exception e) {
+	        System.out.println("Permission already assigned");
+	    }
+	}
+	}
+

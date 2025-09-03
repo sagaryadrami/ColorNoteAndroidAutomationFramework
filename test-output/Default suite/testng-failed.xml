@@ -6,8 +6,11 @@
       <class name="TestCases.FirstFlow">
         <methods>
           <include name="editTheNote"/>
+          <include name="givePermissionAndroidSetting"/>
           <include name="createNote"/>
+          <include name="changeColour"/>
           <include name="createSecondNote"/>
+          <include name="longHoldTheNote"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>
