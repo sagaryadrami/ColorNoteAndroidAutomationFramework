@@ -41,6 +41,19 @@ public class HomePage {
 	@AndroidFindBy(id="com.socialnmobile.dictapps.notepad.color.note:id/bottom_menu_reminder")
 	private WebElement setReminder;
 	
+	@AndroidFindBy(xpath="(//android.widget.ImageView[@resource-id='com.socialnmobile.dictapps.notepad.color.note:id/icon'])[3]")
+	private WebElement colourPicker;
+	
+	@AndroidFindBy(id="com.socialnmobile.dictapps.notepad.color.note:id/txt4")
+	private WebElement selectGreenColour;
+	
+	@AndroidFindBy(xpath="(//android.widget.ImageView[@resource-id='com.socialnmobile.dictapps.notepad.color.note:id/icon'])[5]")
+	private WebElement kebabMenu;
+
+	
+	@AndroidFindBy(xpath="(//android.widget.LinearLayout[@resource-id='android:id/content'])[1]")
+	private WebElement checkOnNote;
+	
 	public TextNotePage clickOnAddButton() throws InterruptedException {
 		Thread.sleep(1000);
 		addButton.click();
@@ -69,5 +82,24 @@ public class HomePage {
 			setReminder.click();
 			return new ReminderPage(driver);
 	
+	}
+	
+	public void longPressNote() {
+		AppiumGestures longpress = new AppiumGestures(driver);
+		longpress.longPressAction(createdNote1);
+	}
+	
+	public void selectColourPicker() {
+		colourPicker.click();
+		selectGreenColour.click();
+	}
+	
+	public void viewKebabMenu() throws InterruptedException {
+		Thread.sleep(2000);
+		kebabMenu.click();
+	}
+	
+	public void CheckItDone() {
+		checkOnNote.click();
 	}
 }

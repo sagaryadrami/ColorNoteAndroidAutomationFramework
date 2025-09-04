@@ -66,5 +66,19 @@ public class FirstFlow extends BaseTest {
 	        System.out.println("Permission already assigned");
 	    }
 	}
+	
+	@Test(dependsOnMethods="givePermissionAndroidSetting")
+	public void changeColourFromHome() throws InterruptedException {
+		HomePage home = new HomePage(driver);
+		home.longPressNote();
+		home.selectColourPicker();
+		home.longPressNote();
+		home.viewKebabMenu();
+		home.CheckItDone();
 	}
-
+	
+//	public void CheckNote() {
+//	HomePage home = new HomePage(driver);
+//	home.longPressNote();
+//	}
+}
