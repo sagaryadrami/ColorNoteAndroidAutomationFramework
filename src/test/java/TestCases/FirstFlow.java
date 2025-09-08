@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import Base.BaseTest;
+import Pages.HamburgerOptionPages;
 import Pages.HomePage;
 import Pages.PhoneSetting;
 import Pages.ReminderPage;
@@ -77,8 +78,18 @@ public class FirstFlow extends BaseTest {
 		home.CheckItDone();
 	}
 	
-//	public void CheckNote() {
-//	HomePage home = new HomePage(driver);
-//	home.longPressNote();
-//	}
+	@Test(dependsOnMethods="changeColourFromHome")
+	public void archiveTheNote() throws InterruptedException {
+		HomePage home = new HomePage(driver);
+		home.longPressNote();
+		home.archiveNote();
+		
+	}
+	
+	@Test(dependsOnMethods="archiveTheNote")
+	public void unarchiveNote() throws InterruptedException {
+		HamburgerOptionPages option = new HamburgerOptionPages(driver);
+		option.hamburgeroption();
+		option.viewArchive();
+	}
 }

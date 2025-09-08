@@ -54,6 +54,12 @@ public class HomePage {
 	@AndroidFindBy(xpath="(//android.widget.LinearLayout[@resource-id='android:id/content'])[1]")
 	private WebElement checkOnNote;
 	
+	@AndroidFindBy(xpath="(//android.widget.ImageView[@resource-id='com.socialnmobile.dictapps.notepad.color.note:id/icon'])[1]")
+	private WebElement archive;
+	
+	@AndroidFindBy(id="android:id/button1")
+	private WebElement okButtonOnArchivePoPUp;
+	
 	public TextNotePage clickOnAddButton() throws InterruptedException {
 		Thread.sleep(1000);
 		addButton.click();
@@ -101,5 +107,15 @@ public class HomePage {
 	
 	public void CheckItDone() {
 		checkOnNote.click();
+	}
+	
+	public void archiveNote() throws InterruptedException {
+		archive.click();
+		Thread.sleep(2000);
+		okButtonOnArchivePoPUp.click();
+	}
+	
+	public HamburgerOptionPages hamburgerOption() {
+		return new HamburgerOptionPages(driver);
 	}
 }
