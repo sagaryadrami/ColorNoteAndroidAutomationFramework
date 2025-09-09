@@ -24,8 +24,12 @@ public class BaseTest {
                 .setAutomationName("UiAutomator2")
                 .setAutoGrantPermissions(true);
         
+        
         options.setAppActivity("com.socialnmobile.colornote.activity.Main");
         options.setAppPackage("com.socialnmobile.dictapps.notepad.color.note");
+
+        options.setNoReset(true);
+       options.setFullReset(false);
 
         
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), options);

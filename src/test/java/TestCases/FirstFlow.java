@@ -92,4 +92,14 @@ public class FirstFlow extends BaseTest {
 		option.hamburgeroption();
 		option.viewArchive();
 	}
+	
+	@Test(dependsOnMethods="unarchiveNote")
+	public void uncheckAndDeleteNote() throws InterruptedException {
+		HomePage page = new HomePage(driver);
+		page.longPressNote();
+		page.viewKebabMenu();
+		page.uncheckTheNote();
+		page.longPressNote();
+		page.deleteTheNote();
+	}
 }

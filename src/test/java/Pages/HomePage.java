@@ -60,6 +60,19 @@ public class HomePage {
 	@AndroidFindBy(id="android:id/button1")
 	private WebElement okButtonOnArchivePoPUp;
 	
+	@AndroidFindBy(xpath="(//android.widget.LinearLayout[@resource-id='android:id/content'])[1]")
+	private WebElement uncheck;
+	
+	@AndroidFindBy(xpath="(//android.widget.ImageView[@resource-id='com.socialnmobile.dictapps.notepad.color.note:id/icon'])[2]")
+	private WebElement DeleteNote;
+	
+	@AndroidFindBy(id="android:id/button1")
+	private WebElement okInDeletePopUp;
+	
+	@AndroidFindBy(xpath="//android.widget.ListView[@resource-id='com.socialnmobile.dictapps.notepad.color.note:id/select_dialog_listview']/android.widget.LinearLayout[1]")
+	private WebElement text;
+	
+	
 	public TextNotePage clickOnAddButton() throws InterruptedException {
 		Thread.sleep(1000);
 		addButton.click();
@@ -115,7 +128,22 @@ public class HomePage {
 		okButtonOnArchivePoPUp.click();
 	}
 	
+	public void uncheckTheNote() {
+		uncheck.click();
+	}
+	
 	public HamburgerOptionPages hamburgerOption() {
 		return new HamburgerOptionPages(driver);
+	}
+	
+	public void deleteTheNote() {
+		DeleteNote.click();
+		okInDeletePopUp.click();
+	}
+	
+	public TextNotePage createTextNote() {
+		addButton.click();
+		text.click();
+		return new TextNotePage(driver);
 	}
 }

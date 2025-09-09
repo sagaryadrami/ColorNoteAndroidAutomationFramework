@@ -73,5 +73,11 @@ public class TextNotePage {
     	backButton.click();
     	
     }
+    
+    public void newNote() {
+    	noteEditor.sendKeys("new note created by automation");
+    	saveButton.click();
+    	backButton.click();
+    }
 	
 }
