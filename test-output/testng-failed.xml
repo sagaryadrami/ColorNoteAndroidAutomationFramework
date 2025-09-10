@@ -6,6 +6,7 @@
       <class name="TestCases.PostiveFlows">
         <methods>
           <include name="createNote"/>
+          <include name="editExistingNote"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>

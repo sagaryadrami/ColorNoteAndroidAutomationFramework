@@ -72,6 +72,12 @@ public class HomePage {
 	@AndroidFindBy(xpath="//android.widget.ListView[@resource-id='com.socialnmobile.dictapps.notepad.color.note:id/select_dialog_listview']/android.widget.LinearLayout[1]")
 	private WebElement text;
 	
+	@AndroidFindBy(id="com.socialnmobile.dictapps.notepad.color.note:id/title")
+	private WebElement noteTitle;
+	
+	@AndroidFindBy(id="com.socialnmobile.dictapps.notepad.color.note:id/title")
+	private WebElement selectExistingNote;
+	
 	
 	public TextNotePage clickOnAddButton() throws InterruptedException {
 		Thread.sleep(1000);
@@ -146,4 +152,18 @@ public class HomePage {
 		text.click();
 		return new TextNotePage(driver);
 	}
+	
+	public String getTitle() {
+		String title = noteTitle.getText();
+		return title;
+		
+	}
+	
+	public TextNotePage selectTheExistingNote() {
+		selectExistingNote.click();
+		return new TextNotePage(driver);
+		
+	}
+
+
 }

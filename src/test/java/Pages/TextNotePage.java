@@ -48,6 +48,9 @@ public class TextNotePage {
     @AndroidFindBy(id="com.socialnmobile.dictapps.notepad.color.note:id/txt5")
     private WebElement blueColour;
     
+    @AndroidFindBy(id="com.socialnmobile.dictapps.notepad.color.note:id/edit_title")
+    private WebElement title;
+    
     public HomePage createNote() throws InterruptedException {
     	Thread.sleep(2000);
     	textOptionSelect.click();
@@ -74,10 +77,22 @@ public class TextNotePage {
     	
     }
     
-    public void newNote() {
+    public HomePage newNote() {
+    	title.sendKeys("sagar");
     	noteEditor.sendKeys("new note created by automation");
     	saveButton.click();
     	backButton.click();
+    	return new HomePage(driver);
+    }
+    
+    public HomePage editExistingNote() {
+    	editBtn.click();
+    	title.clear();
+    	title.sendKeys("sagar yadrami");
+    	noteEditor.sendKeys("new edited note");
+    	saveButton.click();
+    	backButton.click();
+    	return new HomePage(driver);
     }
 	
 }
